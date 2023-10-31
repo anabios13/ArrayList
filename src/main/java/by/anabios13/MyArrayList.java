@@ -61,7 +61,7 @@ public class MyArrayList<E> {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Invalid index");
         }
-        if (size <= array.length - 1) {
+        if (size >= array.length - 1) {
             resize(array.length * 2);
         }
         for (int i = size; i >= index; i--) {

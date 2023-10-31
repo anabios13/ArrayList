@@ -21,17 +21,30 @@ public class MyArrayListTest {
 
     @Test
     public void testAdd() {
+        for (int i=0;i<1000;i++)
         list.add(1);
+        System.out.println(list);
         assertEquals(1, (int) list.get(0));
     }
 
     @Test
+    public void testAddCustomObjects() {
+        for (int i=0;i<1000;i++)
+            listForSortTest.add(new CustomComparableObject("A"));
+        assertEquals(1000, listForSortTest.size());
+    }
+
+
+    @Test
     public void testAddAtIndex() {
         list.add(1);
+        for (int i=0; i<1000;i++)
         list.add(0, 2);
         assertEquals(2, (int) list.get(0));
-        assertEquals(1, (int) list.get(1));
+        assertEquals(1, (int) list.get(1000));
     }
+
+
 
     @Test
     public void testReplaceAtIndex() {
