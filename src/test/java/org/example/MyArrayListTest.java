@@ -23,7 +23,6 @@ public class MyArrayListTest {
     public void testAdd() {
         for (int i=0;i<1000;i++)
         list.add(1);
-        System.out.println(list);
         assertEquals(1, (int) list.get(0));
     }
 
