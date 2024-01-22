@@ -1,1 +1,1 @@
-# ArrayList
+# ArrayList implementation
